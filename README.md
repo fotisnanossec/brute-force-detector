@@ -1,4 +1,5 @@
 PROJECT OVERVIEW
+
 A vigilant security system that detects and notifies you of unauthorized login attempts on your computer.
 THE PROBLEM IT ADDRESSES
 System security prevents a single program from accessing sensitive logs and displaying user notifications.
