@@ -1,36 +1,40 @@
-PROJECT OVERVIEW
+# Project Overview: Vigilant Security System
+A robust and vigilant security solution that detects unauthorized login attempts on your computer and instantly notifies you, ensuring your system's safety.
 
-A vigilant security system that detects and notifies you of unauthorized login attempts on your computer.
+---
 
-THE PROBLEM IT ADDRESSES
+## The Problem It Solves
+System security restrictions prevent a single program from both accessing sensitive logs and displaying user notifications, creating a challenge for real-time monitoring and alerting.
 
-System security prevents a single program from accessing sensitive logs and displaying user notifications.
+---
 
-THE APPROACH TO SOLVING THE PROBLEM
+## Our Solution
+By intelligently splitting responsibilities:
+- A **privileged "watcher"** securely reads system logs.
+- An **unprivileged "notifier"** delivers timely alerts to the user.
 
-By splitting duties, a privileged "watcher" reads logs while an unprivileged "notifier" sends alerts.
+This modular approach ensures both security and functionality, keeping your system protected without compromising performance.
 
-INSTALLATION
+---
 
- * First, install core system libraries like python3-dbus for seamless communication.
+## Installation Guide
+Follow these steps to set up the system:
+1. **Install Core Libraries**: Install essential system libraries, such as `python3-dbus`, for seamless communication between components.
+2. **Set Up a Virtual Environment**: Create a virtual environment to manage dependencies efficiently and avoid conflicts.
+3. **Install Python Packages**: Use the provided `requirements.txt` file to install all necessary Python dependencies.
+4. **Configure Settings**: Create a `.env` file to customize your system settings for optimal performance.
 
- * Next, set up a virtual environment to manage dependencies neatly.
+---
 
- * Then, install the necessary Python packages using the requirements file.
+## Usage Instructions
+1. **Launch the Detector**: Run the privileged detector script with `sudo` in one terminal to monitor system logs.
+2. **Start the Notifier**: In a separate terminal, run the unprivileged notifier script to enable alerts.
+3. **Real-Time Monitoring**: The detector writes events to a temporary file, and the notifier delivers pop-up notifications to keep you informed.
 
- * Finally, configure your settings by creating a .env file.
+---
 
-USAGE
+## Use Case Examples
+- **Instant Alerts**: Receive immediate pop-up notifications when an unauthorized login attempt is detected, keeping you one step ahead of potential threats.
+- **Server Monitoring**: Continuously monitor servers for malicious login attempts without the need to manually check logs.
+- **Privacy Protection**: Ensure privacy by limiting the notifier script to its single task of sending alerts, minimizing unnecessary access.
 
- * Start the privileged detector script with sudo in one terminal.
- * Then, run the unprivileged notifier script in a separate window.
-
- * The detector now writes to a temporary file, and the notifier sends a pop-up.
-
-EXAMPLES
-
- * Get an instant pop-up notification the moment someone tries to hack your computer.
-
- * Monitor a server for malicious login attempts without constantly checking logs.
-
- * Protect your privacy by only allowing the notifier script to do its one job.
