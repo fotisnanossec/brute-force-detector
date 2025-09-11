@@ -1,0 +1,12 @@
+# Environment variables
+.env
+
+# Python bytecode
+*.pyc
+
+# Virtual environment directory
+.venv/
+venv/
+
+# Temporary alert log
+/tmp/bruteforce_alert.log

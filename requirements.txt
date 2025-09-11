@@ -1,0 +1,4 @@
+python-dotenv
+systemd-python
+plyer
+watchdog
